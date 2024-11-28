@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Coming Soon 6</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/countdowntime/flipclock.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+	<script type="module" src="js/model-viewer.min.js"></script>
+	<!-- Make sure to include the model-viewer library -->
+</head>
+
+<body>
+	<div class="bg-img1 size1 overlay1 p-t-24"
+		style="background-image: url('images/—Pngtree—colorful\ colorful\ smoke\ background\ map_2401056.png'); ">
+		<div class="flex-w flex-sb-m p-l-80 p-r-74 p-b-175 respon5">
+			<div class="wrappic1 m-r-30 m-t-10 m-b-10">
+				<h2>VapeLab</h2>
+			</div>
+
+			<div class="flex-w m-t-10 m-b-10">
+				<a href="https://www.facebook.com/23VapeLab" target="_blank"
+					class="size3 flex-c-m how-social trans-04 m-r-6">
+					<i class="fa fa-facebook"></i>
+				</a>
+
+
+			</div>
+		</div>
+
+		<div class="flex-w flex-sa p-r-200 respon1">
+			<div class="p-t-34 p-b-60 respon3">
+				<p class="l1-txt1 p-b-10 respon2">
+					Our website is
+				</p>
+
+
+				<h3 class="l1-txt2 p-b-45 respon2 respon4">
+					Coming Soon
+				</h3>
+				<!-- New Paragraph for Contact Information -->
+				<p class="contact-info p-b-10">
+					For Order Contact Us: 558288062
+				</p>
+
+				<div class="cd100"></div>
+			</div>
+
+			<div class="bg0 wsize1 bor1 p-l-45 p-r-45 p-t-50 p-b-18 p-lr-15-sm">
+				<model-viewer src="3D/Untitled.glb" alt="A 3D model of an E-cig" auto-rotate
+					camera-controls></model-viewer>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer-content">
+					<p>&copy; 2024 VapeLab. All rights reserved. </p>
+					<div class="footer-social">
+
+						<!-- Add more social icons here if needed -->
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+
+
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="vendor/select2/select2.min.js"></script>
+
+	<script src="vendor/countdowntime/flipclock.min.js"></script>
+	<script src="vendor/countdowntime/moment.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
+	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+	<script>
+		// Number(new Date("2024-12-25") - new Date()) / 60 / 60 / 24,
+		$(document).ready(function () {
+			// Calculate remaining time
+			const futureDate = new Date("2024-12-25");
+			const currentDate = new Date();
+			const timeDifference = futureDate - currentDate; // Difference in milliseconds
+
+			// Convert to days and hours for display
+			const remainingDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+			const remainingHours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+			console.log(`Remaining time: ${remainingDays} days and ${remainingHours} hours`);
+
+			// Initialize countdown
+			$('.cd100').countdown100({
+				endtimeYear: futureDate.getFullYear(),
+				endtimeMonth: futureDate.getMonth() + 1, // Months are 0-indexed
+				endtimeDate: futureDate.getDate(),
+				endtimeHours: futureDate.getHours(),
+				endtimeMinutes: futureDate.getMinutes(),
+				endtimeSeconds: futureDate.getSeconds(),
+				timeZone: "" // Set timezone if needed
+			});
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		});
+	</script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+</body>
+
+</html>
